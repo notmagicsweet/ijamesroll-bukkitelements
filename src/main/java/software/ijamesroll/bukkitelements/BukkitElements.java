@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.bukkit.plugin.java.JavaPlugin;
+import software.ijamesroll.bukkitelements.configuration.BaseConfiguration;
 import software.ijamesroll.bukkitelements.module.ModuleManager;
 
 import java.io.File;
@@ -29,6 +31,8 @@ public class BukkitElements {
     // In ideas..
     File moduleFolder = new File("plugins/BukkitElements/module");
     Logger logger;
+    JavaPlugin plugin;
+    BaseConfiguration configuration = new BaseConfiguration(plugin, "configuration.yml");
 
     @Getter
     private static BukkitElements instance; {
@@ -36,7 +40,6 @@ public class BukkitElements {
     }
 
     public void reload() {
-
     }
 
     public void disable() {

@@ -13,7 +13,7 @@ public class BukkitElementsLoader extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        BukkitElements elements = new BukkitElements(getLogger());
+        BukkitElements elements = new BukkitElements(getLogger(), this);
         try {
             elements.getModuleManager().loadModules();
         } catch (Exception e) {
