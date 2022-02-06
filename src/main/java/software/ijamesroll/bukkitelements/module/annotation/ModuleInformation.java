@@ -2,7 +2,7 @@ package software.ijamesroll.bukkitelements.module.annotation;
 /**
  * © JamesRoll [ ijamesroll.software ] - JamesBukkitElements
  * This product is distributed under the MIT license
- * (https://github.com/jamesroll/ijamesroll-bukkitelements/LICENSE)
+ * (https://github.com/ijamesroll/ijamesroll-bukkitelements/LICENSE)
  *
  * The author does not bear any responsibility for this development.
  * It is also prohibited to delete this copyright message.
