@@ -1,2 +1,4 @@
 rootProject.name = 'ijamesroll-bukkitelements'
+include 'bukkitelements-modules:bukkitelements-examplemodule'
+findProject(':bukkitelements-modules:bukkitelements-examplemodule')?.name = 'bukkitelements-examplemodule'
 
