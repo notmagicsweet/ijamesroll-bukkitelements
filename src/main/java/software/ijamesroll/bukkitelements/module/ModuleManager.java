@@ -1,6 +1,9 @@
 package software.ijamesroll.bukkitelements.module;
 
 import com.google.common.base.Joiner;
+import org.bukkit.Bukkit;
+import org.bukkit.event.HandlerList;
+import org.bukkit.event.Listener;
 import software.ijamesroll.bukkitelements.BukkitElements;
 import software.ijamesroll.bukkitelements.module.annotation.ModuleInformation;
 
@@ -102,6 +105,13 @@ public class ModuleManager {
                 Joiner.on(", ").join(module.getInformation().authors())));
         module.setEnabled(false);
         module.handleDisable();
+        module.getListeners().forEach(HandlerList::unregisterAll);
+        module.getListeners().clear();
         MODULE_MAP.remove(module.getInformation().name().toLowerCase());
+    }
+
+    public void registerListener(Listener listener, ElementsModule module){
+        Bukkit.getPluginManager().registerEvents(listener, BukkitElements.getInstance().getPlugin());
+        module.getListeners().add(listener);
     }
 }
